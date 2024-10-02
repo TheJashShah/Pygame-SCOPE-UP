@@ -291,19 +291,19 @@ class Main:
                     if event.key == pygame.K_p:
                         self.is_pause = not self.is_pause
 
-                    if event.key == pygame.K_LEFT and self.scope.x > 0:
+                    if event.key == pygame.K_LEFT or event.key == pygame.K_a and self.scope.x > 0:
                         self.scope.x -= self.scope.speed
                         self.scope.scope_sound.play()
             
-                    if event.key == pygame.K_RIGHT and self.scope.x < self.grid_width - self.scope.width:
+                    if event.key == pygame.K_RIGHT or event.key == pygame.K_d and self.scope.x < self.grid_width - self.scope.width:
                         self.scope.x += self.scope.speed
                         self.scope.scope_sound.play()
 
-                    if event.key == pygame.K_UP and self.scope.y > 0:
+                    if event.key == pygame.K_UP or event.key == pygame.K_w and self.scope.y > 0:
                         self.scope.y -= self.scope.speed
                         self.scope.scope_sound.play()
 
-                    if event.key == pygame.K_DOWN and self.scope.y < self.grid_height - self.scope.width:
+                    if event.key == pygame.K_DOWN or event.key == pygame.K_s and self.scope.y < self.grid_height - self.scope.width:
                         self.scope.y += self.scope.speed
                         self.scope.scope_sound.play()
 
